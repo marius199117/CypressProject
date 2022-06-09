@@ -227,6 +227,12 @@
       "name": "Hoeger LLC",
       "catchPhrase": "Centralized empowering task-force",
       "bs": "target end-to-end models"
+    },
+    "page": {
+      "firstPage": "https://test.io/"
+    },
+    "dashboardPageElements": {
+      "logo":"//div[@class='header__animated-logo-image']"
     }
   }
 ]

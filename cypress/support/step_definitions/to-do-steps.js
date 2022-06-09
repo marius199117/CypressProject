@@ -7,6 +7,10 @@ Given('I open the to-do page', () => {
   todoPage.navigateToHome();
 })
 
+Given('I Open The First Page', () => {
+  todoPage.navigateToHomePage();
+})
+
 Then('{int} to-do items are displayed', (expectedCount) => {
   todoPage.validateTodoCount(expectedCount)
 })
@@ -35,6 +39,14 @@ When('I click the {string} button', (buttonTextToClick) => {
   todoPage.clickButtonByText(buttonTextToClick)
 })
 
+When('I Scroll To The {string} Area', (location) => {
+  todoPage.scrollToElement(location)
+})
+
 Then('to-do item {string} is not displayed', (itemText) => {
   todoPage.verifyTextExistence(itemText, false)
+})
+
+Then('Element {string} Is Displayed', (xpathItem) => {
+    todoPage.verifyTextExistence2(xpathItem, false)
 })

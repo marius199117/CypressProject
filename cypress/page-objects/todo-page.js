@@ -5,6 +5,11 @@ export class TodoPage {
             .visit('https://example.cypress.io/todo')
     }
 
+    navigateToHomePage() {
+        cy
+            .visit("https://test.io/");
+    }
+
     addTodo(newTodoText) {
         cy
             .get('[data-test=new-todo]')
@@ -70,5 +75,23 @@ export class TodoPage {
                 .should('not.exist')
         }
 
+    }
+
+    verifyTextExistence2(xpath, doesExist = true) {
+        if (doesExist) {
+            cy
+                .contains(xpath)
+                .should('exist')
+        }
+        else {
+            cy
+                .contains(xpath)
+                .should('not.exist')
+        }
+    }
+
+    scrollToElement(area) {
+        cy
+        .scrollTo(area)
     }
 }
