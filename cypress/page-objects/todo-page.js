@@ -2,14 +2,12 @@ import { should } from "chai";
 
 export class TodoPage {
 
+
     navigateToHome() {
         cy
             .visit('https://example.cypress.io/todo')
-    }
-
-    navigateToHomePage() {
-        cy
-            .visit("https://test.io/");
+            .clearCookies()
+            
     }
 
     navigateToPage(url) {
@@ -101,11 +99,4 @@ export class TodoPage {
         cy
         .scrollTo(area)
     }
-
-    clickButtonByXpath(element) {
-        cy
-        .waitUntil(() => cy.xpath(element).then($el => $el.val()))
-        .click({force: true})
 }
-}
-

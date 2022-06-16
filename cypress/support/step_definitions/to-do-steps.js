@@ -7,10 +7,6 @@ Given('I open the to-do page', () => {
   todoPage.navigateToHome();
 })
 
-Given(/^I Open The First Page$/, () => {
-  todoPage.navigateToHomePage();
-})
-
 Given(/^I Open The "(.*?)" Page$/, (url) => {
   todoPage.navigateToPage(url);
 })
@@ -35,20 +31,16 @@ Then('to-do item {string} is checked', (expectedItemToBeChecked) => {
   todoPage.verifyTodoIsChecked(expectedItemToBeChecked)
 })
 
-When('I click the {string} link', (linkTextToClick) => {
+When(/^I Click "(.*?)" Link$/, (linkTextToClick) => {
   todoPage.clickAnchorByText(linkTextToClick)
 })
 
-When('I click the {string} button', (buttonTextToClick) => {
+When(/^I Click "(.*?)" Button$/, (buttonTextToClick) => {
   todoPage.clickButtonByText(buttonTextToClick)
 })
 
 When(/^I Scroll To The "(.*?)" Area$/, (location) => {
   todoPage.scrollToElement(location)
-})
-
-Then(/^I Click "(.*?)" Button$/, (button) => {
-  todoPage.clickButtonByXpath(button)
 })
 
 Then('to-do item {string} is not displayed', (itemText) => {

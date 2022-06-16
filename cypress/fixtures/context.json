@@ -227,8 +227,10 @@
       "name": "Hoeger LLC",
       "catchPhrase": "Centralized empowering task-force",
       "bs": "target end-to-end models"
-    },
-    "page": {
+    }
+  },
+  {  
+  "page": {
       "firstPage": "https://test.io/"
     },
     "dashboardPageElements": {
@@ -246,6 +248,9 @@
   },
     "button":{
       "acceptAll":"//button[@id='onetrust-accept-btn-handler']"
+    },
+    "viewAll":{
+      "button":"//a[@href='https://www.emag.ro/genius?ref=hdr_emag-genius']"
     }
   }
 ]
