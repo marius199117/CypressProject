@@ -12,6 +12,7 @@ module.exports = defineConfig({
     excludeSpecPattern: [
       '**/1-getting-started/*.js',
       '**/2-advanced-examples/*.js',
+      '**/4-cucumber-examples/*.js',
     ],
   },
 })

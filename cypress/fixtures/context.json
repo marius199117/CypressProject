@@ -233,6 +233,19 @@
     },
     "dashboardPageElements": {
       "logo":"//div[@class='header__animated-logo-image']"
+    },
+    "footer":{
+      "section":{
+        "organization": "//h3[@class='footer-menu__title'][contains(text(),'ORGANIZATIONS')]"
+    },
+    "option":{
+      "services": "//a[@class='footer-menu__item-link '][@href='/services']",
+      "crowdtesting" : "//a[@class='footer-menu__item-link '][@href='/crowdtesting']",
+      "coverage": "coverage"
+    }
+  },
+    "button":{
+      "acceptAll":"//button[@id='onetrust-accept-btn-handler']"
     }
   }
 ]

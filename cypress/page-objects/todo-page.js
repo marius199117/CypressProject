@@ -1,3 +1,5 @@
+import { should } from "chai";
+
 export class TodoPage {
 
     navigateToHome() {
@@ -8,6 +10,11 @@ export class TodoPage {
     navigateToHomePage() {
         cy
             .visit("https://test.io/");
+    }
+
+    navigateToPage(url) {
+        cy
+            .visit(url)
     }
 
     addTodo(newTodoText) {
@@ -94,4 +101,11 @@ export class TodoPage {
         cy
         .scrollTo(area)
     }
+
+    clickButtonByXpath(element) {
+        cy
+        .waitUntil(() => cy.xpath(element).then($el => $el.val()))
+        .click({force: true})
 }
+}
+
