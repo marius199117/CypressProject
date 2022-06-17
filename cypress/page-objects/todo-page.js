@@ -48,6 +48,13 @@ export class TodoPage {
             .check()
     }
 
+    check(toDoText) {
+        cy.contains('a', toDoText)
+        .find('input[type=checkbox]')
+        .check()
+            
+    }
+
     verifyTodoIsChecked(todoText) {
         cy.contains(todoText)
             .parents('li')

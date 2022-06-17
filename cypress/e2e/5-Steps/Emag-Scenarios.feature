@@ -9,7 +9,7 @@ Scenario: Succesfully Navigate To Genius Page
 
 Scenario: Succesfully Navigate To Resigilate Page And Choose All The Products With Price Between 50-100
     When I Click "Resigilate" Link 
-    # Then I Check "" Checkbox
+    # Then I Check "Toate produsele " Checkbox
     
 
     

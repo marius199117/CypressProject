@@ -27,6 +27,10 @@ When('I mark to-do item {string} as complete', (itemToCheck) => {
   todoPage.checkTodo(itemToCheck)
 })
 
+When(/^I Check "(.*?)" Checkbox$/, (itemToCheck) => {
+  todoPage.check(itemToCheck)
+})
+
 Then('to-do item {string} is checked', (expectedItemToBeChecked) => {
   todoPage.verifyTodoIsChecked(expectedItemToBeChecked)
 })
@@ -47,10 +51,10 @@ Then('to-do item {string} is not displayed', (itemText) => {
   todoPage.verifyTextExistence(itemText, false)
 })
 
-Then(/^Element "(.*?)" Is Displayed$/, (xpathItem) => {
+Then(/^I Verify That Element "(.*?)" Is Displayed$/, (xpathItem) => {
     todoPage.verifyTextExistence2(xpathItem, false)
 })
 
-Then(/^Element 2 "(.*?)" Is Displayed$/, (xpathItem) => {
+Then(/^I Verify That Element 2 "(.*?)" Is Displayed$/, (xpathItem) => {
   todoPage.verifyTextExistence2(xpathItem, false)
 })
