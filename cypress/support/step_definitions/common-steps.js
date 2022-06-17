@@ -1,5 +1,5 @@
 import { Then } from "cypress-cucumber-preprocessor/steps";
 
-Then(`I see {string} in the title`, title => {
+Then(/^I See "(.*?)" In The Title$/, title => {
   cy.title().should("include", title);
 });

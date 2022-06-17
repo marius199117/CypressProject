@@ -48,12 +48,6 @@ export class TodoPage {
             .check()
     }
 
-    check(toDoText) {
-        cy.contains('a', toDoText)
-        .find('input[type=checkbox]')
-        .check()
-            
-    }
 
     verifyTodoIsChecked(todoText) {
         cy.contains(todoText)
@@ -89,21 +83,8 @@ export class TodoPage {
 
     }
 
-    verifyTextExistence2(xpath, doesExist = true) {
-        if (doesExist) {
-            cy
-                .contains(xpath)
-                .should('exist')
-        }
-        else {
-            cy
-                .contains(xpath)
-                .should('not.exist')
-        }
-    }
-
     scrollToElement(area) {
         cy
-        .scrollTo(area)
+            .scrollTo(area)
     }
 }
