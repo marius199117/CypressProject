@@ -69,6 +69,13 @@ export class TodoPage {
             .click()
     }
 
+    clickSpanByText(spanText) {
+        cy
+            .get(`span:contains("${spanText}")`)
+            .should('have.length', 1)
+            .click()
+    }
+
     verifyTextExistence(text, doesExist = true) {
         if (doesExist) {
             cy

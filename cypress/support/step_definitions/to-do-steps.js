@@ -39,10 +39,13 @@ When(/^I Click "(.*?)" Button$/, (buttonTextToClick) => {
   todoPage.clickButtonByText(buttonTextToClick)
 })
 
+When(/^I Click "(.*?)" Span$/, (spanTextToClick) => {
+  todoPage.clickSpanByText(spanTextToClick)
+})
+
 When(/^I Scroll To The "(.*?)" Area$/, (location) => {
   todoPage.scrollToElement(location)
 })
-
 
 Then(/^I Verify That Element "(.*?)" Is Displayed$/, (text) => {
     todoPage.verifyTextExistence(text, true)

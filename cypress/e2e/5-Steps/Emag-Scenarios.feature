@@ -12,5 +12,9 @@ Scenario: Succesfully Navigate To Resigilate Page And Choose A Product And Add T
     When I Click "Vezi detalii cos" Link
     Then I See "Cosul meu" In The Title
     
-
-    
+Scenario: Electrocasnice si climatizare
+    Given I Open The "https://www.emag.ro/" Page
+    And I Click "Laptop, Tablete & Telefoane" Span
+    And I Click "Laptopuri si accesorii" Link
+    When I Click "Asus" Link
+    Then I See "Laptopuri ASUS" In The Title
